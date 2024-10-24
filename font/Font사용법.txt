@@ -1,0 +1,8 @@
+css 파일에 아래와 같은 내용을 추가해 주세요.
+
+@font-face {
+  font-family: 'GenesisSansHeadKRLight';
+  src: url('../font/GenesisSansHeadKRLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal; 
+}

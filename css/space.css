@@ -1,0 +1,112 @@
+@import url(reset.css);
+
+@font-face {
+  font-family: 'GenesisSansHeadKRLight';
+  src: url('../font/GenesisSansHeadKRLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'GenesisSansTextKRRegular;';
+  src: url('../font/GenesisSansTextKRRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'GenesisSansHeadKRRegular';
+  src: url('../font/GenesisSansHeadKRRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal; 
+}
+
+body {
+  font-size: 18px;
+}
+
+/* ---------------- start: main style --------------------- */
+
+/* section1(space main) style */
+main .spaceMain {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+
+  /* SCROLL TO EXPLORE를 가로 가운데 정렬 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* 글씨 기본 설정 */
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.486);
+}
+
+/* 글자색이 하얀 배경색에도 잘 보이게 하기 위함 */
+main .spaceMain::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  z-index: 8;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.2;
+}
+main .spaceMain .background-video {
+  width: 100%;
+  /* .spaceMain에 꽉차게 배치 */
+  position: absolute;
+  left: 0;
+  top: 0;
+  
+  /* spaceMain의 텍스트가 보이게 */
+  z-index: -3;
+}
+
+main .spaceMain .mainTitle {
+  /* .spaceMain의 정중앙에 배치 */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+}
+
+main .spaceMain .mainTitle h1 {
+  font-size: 60px;
+  font-family: 'GenesisSansHeadKRLight', sans-serif;
+}
+
+main .spaceMain .mainTitle h2 {
+  font-size: 20px; 
+  transform: translate(0, 70px);
+  font-family: 'GenesisSansTextKRRegular', sans-serif;
+}
+
+
+main .spaceMain .mainScroll {
+  /* 위치 조정 */
+  position: absolute;
+  bottom: 4%;
+  
+  /* 텍스트 가운데 정렬 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 12px;
+}
+
+main .spaceMain .mainScroll p {
+  margin-bottom: 12px;
+  font-family: 'GenesisSansHeadKRRegular', sans-serif;
+}
+
+
+/* ---------------- finish: main style ---------------------*/
